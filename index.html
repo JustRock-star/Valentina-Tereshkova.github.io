@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Валентина Терешкова — Первая женщина-космонавт</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:700,900|Montserrat:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Космический фон с анимацией звёзд -->
+    <canvas class="stars"></canvas>
+    <!-- Далекие корабли -->
+    <img src="images/spaceship1.png" class="spaceship" style="top:12vh; animation-delay:0s;">
+    <img src="images/spaceship2.png" class="spaceship" style="top:30vh; animation-delay:4s;">
+    <!-- Ракета для анимации взлета -->
+    <img src="images/rocket.png" class="rocket" id="mainRocket">
+
+    <div class="header">
+        <h1>Валентина Терешкова</h1>
+        <h2>Первая женщина-космонавт</h2>
+    </div>
+    <nav class="nav">
+        <button class="nav-btn" data-section="main">Главная</button>
+        <button class="nav-btn" data-section="bio">Биография</button>
+        <button class="nav-btn" data-section="flight">Полет в космос</button>
+        <button class="nav-btn" data-section="impact">Влияние и достижения</button>
+        <button class="nav-btn" data-section="facts">Интересные факты</button>
+        <button class="nav-btn" data-section="gallery">Галерея</button>
+        <button class="nav-btn" data-section="game">Космическая игра</button>
+    </nav>
+
+    <section class="section active" id="main">
+        <h3>Добро пожаловать в космическое путешествие!</h3>
+        <p>Погрузись в историю первой женщины-космонавта, открой для себя удивительные факты, посмотри фото и сыграй в космическую игру!</p>
+        <button id="launchRocket" class="nav-btn">Запустить ракету!</button>
+        <!-- Здесь будут анимации, интро, звуки -->
+    </section>
+    <section class="section" id="bio">
+        <h3>Биография</h3>
+        <p><strong>Ранние годы:</strong> Терешкова родилась 6 марта 1937 года в деревне Большое Масленниково на Волге в Ярославской области. Её отец был водителем трактора и сержантом в Советской армии. Когда девочке было всего два года, отец погиб во время зимней войны в Финляндии. Мать одна воспитывала трёх детей, работая на текстильном производстве.</p>
+        <p><strong>Образование и карьера до космоса:</strong> Начальную школу Валентина закончила в возрасте 16 лет. Затем работала на ткацкой фабрике и заводе, занималась корреспондентским образованием. Самым главным увлечением Валентины был парашютный спорт — её опыт прыжков с парашютом и стал ключевым фактором при отборе в космонавты. Она совершила свой первый прыжок 21 мая 1959 года в возрасте 22 лет.</p>
+        <p><strong>Отбор в космонавты:</strong> В 1962 году из 400 кандидатов была отобрана вместе с четырьмя другими женщинами в отряд космонавтов. Прошла суровую подготовку: центрифугу, изоляционные тесты, прыжки на воду, тренировки на боевых самолётах МиГ-15. Её позывной при полёте — «Чайка».</p>
+    </section>
+    <section class="section" id="flight">
+        <h3>Полет в космос — Восток-6</h3>
+        <p><strong>Дата полёта:</strong> 16 июня 1963 года Терешкова была запущена в космос на корабле «Восток-6». Она стала первой женщиной, совершившей космический полёт. Её позывной был «Чайка».</p>
+        <p><strong>Параметры полёта:</strong> Полёт продолжался 2 дня, 22 часа и 50 минут. За это время она совершила 48 оборотов вокруг Земли, пролетев около 1,6 млн км. На момент полёта Терешкова была одной из молодых — ей было всего 26 лет. Она остаётся самой молодой женщиной, когда-либо летавшей в космос!</p>
+        <p><strong>Исторический факт:</strong> За один полёт Валентина провела в космосе больше времени, чем все американские астронавты, летавшие до неё, вместе взятые! Её полёт продолжался дольше, чем полёты первого человека в космосе Юрия Гагарина.</p>
+        <p><strong>Работа в космосе:</strong> Во время полёта Валентина проводила научные эксперименты, вела дневник наблюдений, фотографировала горизонт Земли. Она разговаривала с советским премьером Никитой Хрущёвым по радио. Хотя женщина испытывала некоторый дискомфорт и тошноту, она успешно справилась со всеми задачами миссии.</p>
+        <p><strong>Возвращение на Землю:</strong> Приземлилась в Казахстане, в 620 км северо-восточнее Карганды. При парашютном спуске получила ушиб носа из-за сильного ветра, но благополучно приземлилась на земле.</p>
+    </section>
+    <section class="section" id="impact">
+        <h3>Влияние и достижения</h3>
+        <ul>
+            <li>Герой Советского Союза (1963)</li>
+            <li>Первая женщина-космонавт в мире</li>
+            <li>Почётный гражданин десятков городов мира</li>
+            <li>Доктор технических наук, профессор</li>
+            <li>Депутат Верховного Совета СССР, общественный деятель</li>
+            <li>Вдохновила женщин по всему миру на научные и космические достижения</li>
+        </ul>
+    </section>
+    <section class="section" id="facts">
+        <h3>Интересные факты</h3>
+        <ul id="facts-list">
+            <li>🌟 Терешкова совершила <strong>48 оборотов вокруг Земли</strong> за один полёт, что было больше, чем у 4 американских астронавтов вместе!</li>
+            <li>📡 Её позывной был <strong>«Чайка»</strong> — в честь её позывного астероид был назван 1671 Chaika.</li>
+            <li>🧵 До космоса работала ткачихой на текстильном комбинате и увлекалась парашютным спортом.</li>
+            <li>🌙 Её имя носит кратер на Луне (на обратной стороне) и астероид.</li>
+            <li>🚀 Её полёт длился 2 дня 22 часа 50 минут — это было дольше, чем весь полёт первого человека в космосе Юрия Гагарина!</li>
+            <li>👰 Через 5 месяцев после полёта вышла замуж за космонавта Андриана Николаева. Их дочь Елена — первый ребёнок, чьи оба родителя летали в космос!</li>
+            <li>🎖️ Получила звание «Герой Советского Союза» и множество международных наград.</li>
+            <li>🌍 Сделала 42 зарубежных визита между 1963 и 1970 годами — больше, чем любой другой советский космонавт.</li>
+            <li>📚 После космоса окончила авиационную академию имени Жуковского с отличием в 1969 году.</li>
+            <li>♻️ В 2007 году сказала, что если бы у неё были деньги, она бы полетела на Марс!</li>
+            <li>🇺🇳 Стала международным символом женской силы и вдохновила миллионы женщин по всему миру.</li>
+        </ul>
+    </section>
+    <section class="section" id="gallery">
+        <h3>Галерея</h3>
+        <div id="gallery-list">
+            <img src="images/tereshkova1.jpg" alt="Терешкова в скафандре" style="max-width:220px; margin:12px; border-radius:16px; box-shadow:0 0 16px #23243a;">
+            <img src="images/tereshkova2.jpg" alt="Полет Восток-6" style="max-width:220px; margin:12px; border-radius:16px; box-shadow:0 0 16px #23243a;">
+            <img src="images/rocket.png" alt="Ракета" style="max-width:120px; margin:12px; border-radius:16px; box-shadow:0 0 16px #23243a;">
+        </div>
+    </section>
+    <section class="section" id="game">
+        <h3>🚀 Космическая игра - Путешествие Терешковой</h3>
+        <div id="game-container">
+            <div style="background:rgba(90, 106, 255, 0.1); padding:16px; border-radius:12px; margin-bottom:20px;">
+                <p style="font-size:1em; margin:8px 0;">
+                    <strong>🎮 КАК ИГРАТЬ:</strong><br>
+                    ✨ <strong>Управление:</strong> Стрелки клавиатуры (↑ ↓ ← →) или движение мышки<br>
+                    ✅ <strong>Цель:</strong> Собери все светящиеся кристаллы за отведённое время<br>
+                    ⚠️ <strong>Опасность:</strong> Избегай астероидов - столкновение означает конец игры<br>
+                    📈 <strong>Уровни:</strong> Каждый пройденный уровень добавляет кристаллы и сложность!
+                </p>
+            </div>
+            
+            <button id="gameStartBtn" class="nav-btn" style="margin-bottom:20px; font-size:1.1em; padding: 12px 24px;">🎮 Начать игру</button>
+            <button id="gameResetBtn" class="nav-btn" style="margin-bottom:20px; font-size:1.1em; padding: 12px 24px; display:none;">🔄 Уровень заново</button>
+            
+            <div style="display:flex; justify-content:space-around; margin-bottom:20px; flex-wrap:wrap;">
+                <div style="font-size:1.1em; color:#5a6aff;"><strong>⏱️ Время: <span id="gameTimer">30</span>с</strong></div>
+                <div style="font-size:1.1em; color:#00ff88;"><strong>💎 Баллы: <span id="gameScore">0</span></strong></div>
+            </div>
+            
+            <div id="gameArea" style="position:relative; width:100%; height:450px; border:3px solid #5a6aff; border-radius:16px; background:rgba(10,15,44,0.8); overflow:hidden; margin-bottom:20px; box-shadow:0 0 20px #5a6aff;"></div>
+            
+            <div id="gameMessage" style="font-size:1.2em; color:#00ff88; min-height:30px; text-align:center; font-weight:bold; text-shadow:0 0 8px #5a6aff;"></div>
+        </div>
+    </section>
+
+    <audio id="rocketSound" src="sounds/rocket.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+    <script src="game.js"></script>
+    <div class="creator-credit">Created by Arman Grigoryan</div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* Кредит автора */
+.creator-credit {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+    font-size: 1.2em;
+    color: #fff;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #23243a 0%, #5a6aff 100%);
+    padding: 8px 24px;
+    border-radius: 18px;
+    box-shadow: 0 0 16px #23243a;
+    opacity: 0.85;
+    z-index: 10;
+}
+/*
+style.css — основной файл стилей для сайта Валентины Терешковой
+Космический фон, анимации звёзд, кораблей, плавные переходы, стили навигации и вкладок
+*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    color: #e0e6f7;
+    overflow-x: hidden;
+}
+
+.stars {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.header {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    z-index: 2;
+}
+
+.nav-btn {
+    background: linear-gradient(90deg, #3a3f5a 0%, #23243a 100%);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 32px;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0 0 12px #2e3a5a;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.nav-btn:hover {
+    background: linear-gradient(90deg, #5a6aff 0%, #23243a 100%);
+    transform: scale(1.08);
+}
+
+.section {
+    display: none;
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 60px auto 0 auto;
+    background: rgba(20, 30, 60, 0.85);
+    border-radius: 24px;
+    box-shadow: 0 0 32px #23243a;
+    padding: 40px 32px;
+    animation: fadeIn 1s;
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.rocket {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 120px;
+    z-index: 3;
+    animation: rocketLaunch 2.5s cubic-bezier(.42,.01,.58,1) forwards;
+    display: none;
+}
+
+.rocket.active {
+    display: block;
+}
+
+@keyframes rocketLaunch {
+    0% { bottom: 0; opacity: 1; }
+    80% { bottom: 80vh; opacity: 1; }
+    100% { bottom: 100vh; opacity: 0; }
+}
+
+/* Анимация мигающих звёзд */
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.2; }
+}
+
+/* Далекие корабли */
+.spaceship {
+    position: absolute;
+    width: 60px;
+    opacity: 0.7;
+    animation: spaceshipFly 12s linear infinite;
+}
+
+@keyframes spaceshipFly {
+    0% { left: -80px; top: 10vh; }
+    100% { left: 110vw; top: 80vh; }
+}
+
+/* ...дополнительные стили для вкладок, карточек, игры, галереи... */
+
+/* Анимация для плавающих звёзд в игре */
+.floating-star {
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
